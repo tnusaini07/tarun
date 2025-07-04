@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f8f8f8;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fff;
+            padding: 18px 40px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+        .navbar .logo {
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: #222;
+            letter-spacing: 1px;
+        }
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 28px;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar ul li a {
+            text-decoration: none;
+            color: #222;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .navbar ul li a:hover {
+            color: #0070f3;
+        }
+        @media (max-width: 700px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 16px 20px;
+            }
+            .navbar ul {
+                flex-direction: column;
+                gap: 12px;
+                width: 100%;
+            }
+        }
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 60px 40px;
+            background: #0070f3;
+            color: #fff;
+        }
+        .hero-content {
+            max-width: 600px;
+        }
+        .hero-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+        }
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 24px;
+            opacity: 0.9;
+        }
+        .hero-btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #fff;
+            color: #0070f3;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 500;
+            transition: background 0.3s, color 0.3s;
+        }
+        .hero-btn:hover {
+            background: rgba(255, 255, 255, 0.8);
+        }
+        .hero-image {
+            max-width: 500px;
+            width: 100%;
+        }
+        .hero-image img {
+            width: 100%;
+            height: auto;
+        }
+        @media (max-width: 700px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero-content {
+                max-width: 100%;
+            }
+            .hero-image {
+                margin-top: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">DesignCard</div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Digital Business Card</h1>
+            <p>Share your professional identity instantly. Create, customize, and share your digital business card with anyone, anywhere.</p>
+            <a href="#" class="hero-btn">Get Started</a>
+        </div>
+        <div class="hero-image">
+            <img src="https://unsplash.com/photos/a-misty-landscape-with-snowy-mountains-and-sky-2-a-R0glb48" alt="Digital Business Card" />
+        </div>
+    </section>
+</body>
+</html>
