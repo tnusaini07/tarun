@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarun</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">
+        <div class="logo-circle">
+            <img src="https://dynamic.brandcrowd.com/template/preview/design/f79b232e-fe5d-4a7f-b842-1fa7a5c180ea/8ec9215c-62d0-4e88-8b02-1aa0e49d1ea9?v=4&designTemplateVersion=1&logoTemplateVersion=2&size=design-preview-wide-2x" alt="DesignCard Logo">
+        </div>
+        <span>DesignCard</span>
+    </div>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
+<section class="hero">
+    <div class="hero-glass">
+        <div class="hero-content">
+            <h1><span class="highlight">Digital Business Card</span></h1>
+            <p class="hero-desc">Share your professional identity instantly.<br>
+            Create, customize, and share your digital business card with anyone, anywhere.</p>
+            <a href="#card-form-section" class="hero-btn">Get Started</a>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=500&q=80" alt="Digital Business Card" />
+        </div>
+    </div>
+</section>
+    
+    <section class="card-form-section" id="card-form-section">
+        <h2 style="color: aliceblue;">Add Your Business Card</h2>
+        <form class="card-form" id="cardForm">
+            <input type="text" id="name" placeholder="Your Name" required />
+            <input type="text" id="title" placeholder="Your Title" required />
+            <textarea id="desc" placeholder="Short Description" rows="2"></textarea>
+            <input type="email" id="contact" placeholder="Contact Email" required />
+            <button type="submit">Add Card</button>
+        </form>
+    </section>
+    <section class="cards-list" id="cardsList">
+    <!-- Sample Cards -->
+    <div class="card">
+        <div class="card-name">Tarun Sharma</div>
+        <div class="card-title">UI/UX Designer</div>
+        <div class="card-desc">Passionate about creating beautiful and functional user experiences.</div>
+        <div class="card-contact">tarun@example.com</div>
+    </div>
+    <div class="card">
+        <div class="card-name">Priya Singh</div>
+        <div class="card-title">Frontend Developer</div>
+        <div class="card-desc">Expert in React and modern web technologies.</div>
+        <div class="card-contact">priya.singh@example.com</div>
+    </div>
+    <div class="card">
+        <div class="card-name">Amit Verma</div>
+        <div class="card-title">Marketing Lead</div>
+        <div class="card-desc">Helping brands grow with creative marketing strategies.</div>
+        <div class="card-contact">amit.verma@example.com</div>
+    </div>
+    <!-- Cards added by users will appear below -->
+</section>
+    <section class="cards-list" id="cardsList">
+        <!-- Cards will appear here -->
+    </section>
+    <script>
+        // Simple JS to add cards dynamically
+        const cardForm = document.getElementById('cardForm');
+        const cardsList = document.getElementById('cardsList');
+
+        cardForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value.trim();
+            const title = document.getElementById('title').value.trim();
+            const desc = document.getElementById('desc').value.trim();
+            const contact = document.getElementById('contact').value.trim();
+
+            if (name && title && contact) {
+                const card = document.createElement('div');
+                card.className = 'card';
+                card.innerHTML = `
+                    <div class="card-name">${name}</div>
+                    <div class="card-title">${title}</div>
+                    <div class="card-desc">${desc}</div>
+                    <div class="card-contact">${contact}</div>
+                `;
+                cardsList.prepend(card);
+                cardForm.reset();
+            }
+        });
+    </script>
+</body>
+</html>
